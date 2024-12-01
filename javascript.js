@@ -1,4 +1,23 @@
-
+document.addEventListener("DOMContentLoaded", () => {
+   let player = document.querySelector(".player");
+   player.addEventListener('click', (event) => {
+       let target = event.target;
+       switch (target.id) {
+           case 'rock':
+               console.log("rock");
+               break;
+           case 'paper':
+               console.log("paper");
+               break;
+           case 'scissor':
+               console.log("scissor");
+               break;
+           default:
+               console.log("Invalid selection");
+       }
+   });
+});
+/*
 function getComputerChoice(){
     let game_listArray = ["ROCK", "PAPER", "SCISSOR"];
     let index = Math.floor(Math.random() * game_listArray.length);  // Generates a number between 0 and 2
@@ -62,4 +81,4 @@ function playGame(){
     }
 }
 playGame();
-
+*/
