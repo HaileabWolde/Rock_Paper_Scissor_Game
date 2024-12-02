@@ -1,22 +1,76 @@
-document.addEventListener("DOMContentLoaded", () => {
+function getAIChoice() {
+  let game_ChoiceArray = [
+      "./paper2.png",
+      "./rock.png",
+      "./scissor.png"
+  ];
+  let index = Math.floor(Math.random() * game_ChoiceArray.length); // Fixed Math.random usage
+  let choice = game_ChoiceArray[index];
+
+  const pic = document.createElement('img');
+  pic.src = choice;
+  
+  // Get the first element with the class "computer"
+  let computerImage = document.querySelector(".computer"); // Use querySelector for a single element
+  // Clear any previous AI choice images (optional)
+  computerImage.innerHTML = ""; 
+
+  computerImage.appendChild(pic); // Set the `src` attribute for the selected element
+  return choice;
+}
+  function playGame(e){
+    function playRound(humanChoice, aiChoice) {
+      if(humanChoice == "rock" && aiChoice == "./scissor.png"){
+           console.log("You Win! Rock Beats Scissor");
+           humandigit = humandigit + 1;
+      }
+      else if(humanChoice == "rock" && computerChoice == "./paper2.png") {
+         console.log("You Lose! PAPER Beats Rock");
+         computerdigit = computerdigit + 1;
+      }
+      else if(humanChoice == "rock" && computerChoice == "./rock.png") {
+         console.log("IT IS A TIE!")
+      }
+       else if(humanChoice == "paper2" && computerChoice == "./rock.png") {
+         console.log("You Win! Paper Beats Rock");
+         humandigit = humandigit + 1;
+      }
+       else if(humanChoice == "paper2" && computerChoice == "./scissor.png") {
+         console.log("You Win! Paper Beats Scissor");
+         humandigit = humandigit + 1;
+      }
+      else if(humanChoice == "paper2" && computerChoice == "./paper2.png") {
+         console.log("IT IS A TIE!");
+      }
+       else if(humanChoice == "scissor" && computerChoice == "./paper2.png") {
+         console.log("You Win! Scissor Beats Paper");
+         humandigit = humandigit + 1;
+      }
+       else if(humanChoice == "scissor" && computerChoice == "./rock.png") {
+         console.log("You Lose! Rock Beats Scissor");
+         computerdigit = computerdigit + 1;
+      }
+      else {
+        console.log("It is A TIE!")
+      }
+   }
+   let humandigit = 0;
+   let computerdigit = 0;
+   let sum = 0;
+   for (let i = 0; sum < 5; i++){
+    let humanChoice = e.target.id;
+    let aiChoice = getAIChoice();
+      playRound(humanChoice, aiChoice);
+      sum = humandigit + computerdigit;
+      console.log(humandigit);
+      console.log(computerdigit);
+   }
+
+  }
    let player = document.querySelector(".player");
-   player.addEventListener('click', (event) => {
-       let target = event.target;
-       switch (target.id) {
-           case 'rock':
-               console.log("rock");
-               break;
-           case 'paper':
-               console.log("paper");
-               break;
-           case 'scissor':
-               console.log("scissor");
-               break;
-           default:
-               console.log("Invalid selection");
-       }
-   });
-});
+   player.addEventListener('click', playGame);
+
+  
 /*
 function getComputerChoice(){
     let game_listArray = ["ROCK", "PAPER", "SCISSOR"];

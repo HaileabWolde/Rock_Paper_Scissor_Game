@@ -45,7 +45,13 @@ margin-top: 20px;
     border-radius: 15px;
 }
 .computer{
+    display: flex;
+    justify-content: end;
+    align-items: center;
     width: 40%;
+}
+.computer>img{
+    margin-right: 10px;
 }
 img{
     width: 100px; /* Or set a fixed value that suits your design */
@@ -70,5 +76,5 @@ h1{
 }
 
 .AI{
-    animation: shake 0.5s ease-in-out infinite;
+    animation: shake 2s ease-in-out infinite;
 }
