@@ -24,29 +24,29 @@ function getAIChoice() {
            console.log("You Win! Rock Beats Scissor");
            humandigit = humandigit + 1;
       }
-      else if(humanChoice == "rock" && computerChoice == "./paper2.png") {
+      else if(humanChoice == "rock" && aiChoice == "./paper2.png") {
          console.log("You Lose! PAPER Beats Rock");
          computerdigit = computerdigit + 1;
       }
-      else if(humanChoice == "rock" && computerChoice == "./rock.png") {
+      else if(humanChoice == "rock" && aiChoice == "./rock.png") {
          console.log("IT IS A TIE!")
       }
-       else if(humanChoice == "paper2" && computerChoice == "./rock.png") {
+       else if(humanChoice == "paper2" && aiChoice == "./rock.png") {
          console.log("You Win! Paper Beats Rock");
          humandigit = humandigit + 1;
       }
-       else if(humanChoice == "paper2" && computerChoice == "./scissor.png") {
+       else if(humanChoice == "paper2" && aiChoice == "./scissor.png") {
          console.log("You Win! Paper Beats Scissor");
          humandigit = humandigit + 1;
       }
-      else if(humanChoice == "paper2" && computerChoice == "./paper2.png") {
+      else if(humanChoice == "paper2" && aiChoice == "./paper2.png") {
          console.log("IT IS A TIE!");
       }
-       else if(humanChoice == "scissor" && computerChoice == "./paper2.png") {
+       else if(humanChoice == "scissor" && aiChoice == "./paper2.png") {
          console.log("You Win! Scissor Beats Paper");
          humandigit = humandigit + 1;
       }
-       else if(humanChoice == "scissor" && computerChoice == "./rock.png") {
+       else if(humanChoice == "scissor" && aiChoice == "./rock.png") {
          console.log("You Lose! Rock Beats Scissor");
          computerdigit = computerdigit + 1;
       }
