@@ -12,12 +12,13 @@ body{
     margin-right: auto;
     background-color: #E6E6FA;
     width: 80%;
-    height: 68%;
+    height: 70%;
     border: 3px solid #1F2937;
     border-radius: 15px;
     display: flex; /* Enable flexbox */
     flex-direction: column;
    justify-content: center;
+   padding-bottom: 30px;
 }
 .content{
 display: flex;
@@ -77,4 +78,34 @@ h1{
 
 .AI{
     animation: shake 2s ease-in-out infinite;
+}
+.text-DIV{
+    display: flex;
+    justify-content: center;
+}
+.scoreBoard{
+    width: 90%;
+    height: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #1F2937; 
+    border-radius: 15px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.scoreBoard>h2{
+    text-align: center;
+}
+.playerBoard{
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    border: 3px solid yellow; 
+    margin-bottom: 30px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
