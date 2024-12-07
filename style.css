@@ -84,28 +84,32 @@ h1{
     justify-content: center;
 }
 .scoreBoard{
+    background-color: #F5F5DC;
+    margin-top: 15px;
     width: 90%;
-    height: 20%;
     margin-left: auto;
     margin-right: auto;
     border: 3px solid #1F2937; 
     border-radius: 15px;
-    padding-bottom: 25px;
-    padding-top: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    color: #8B0000;
 }
 .scoreBoard>h2{
     text-align: center;
 }
 .playerBoard{
     display: flex;
-    padding-bottom: 20px;
-    justify-content: space-between;
-    border: 3px solid yellow; 
-    margin-bottom: 30px;
+    flex-direction: column;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+.score{
+    display: flex;
+    justify-content: space-between;
 }

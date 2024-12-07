@@ -1,6 +1,10 @@
 let humandigit = 0;
 let computerdigit = 0;
+let result = document.querySelector(".result");
 let smallDiv = document.querySelector(".text-DIV")
+let one = document.querySelector(".one");
+let ai = document.querySelector(".ai");
+
 function getAIChoice() {
   let game_ChoiceArray = [
     "./paper2.png",
@@ -20,6 +24,7 @@ function getAIChoice() {
 }
 
 function playRound(humanChoice, aiChoice) {
+   result.innerHTML = "";
    smallDiv.innerHTML= "";
   if (humanChoice == "rock" && aiChoice == "./scissor.png") {
     smallDiv.textContent = "You Win! Rock Beats Scissor";
@@ -54,17 +59,19 @@ function playGame(e) {
   console.log(humanChoice);
   console.log(aiChoice);
   playRound(humanChoice, aiChoice);
-  scoreBoard.textContent = `${humandigit}`
-  playerBoard.textContent = `${computerdigit}`
- //scoreBoard.textContent = `Player: ${humandigit}, Computer: ${computerdigit}`;
-
+  one.textContent = `${humandigit}`;
+  ai.textContent = `${computerdigit}`;
+  
+  // Check if the total rounds reach 5
   if (humandigit + computerdigit >= 5) {
     let winner =
       humandigit > computerdigit
-        ? "You Win!"
+        ? `You Win! 😊`
         : humandigit < computerdigit
-        ? "Computer Wins!"
-        : "It's a Tie!";
+        ? `Computer Wins! 😞`
+        : `It's a Tie! 🤝`;
+        
+    result.textContent = winner;
 
     // Reset scores for a new game
     humandigit = 0;
